@@ -1,0 +1,262 @@
+/* --------------------------
+  Base Styles
+--------------------------- */
+
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+*/* =================================
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+    margin: 1em;
+    background-color:  lightblue;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+h2,
+h3,
+a {
+	color: gold;
+}
+h2,
+h3 {
+	margin-top: 0;
+}
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}
+
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+/* Target viewport sizes less than 576px */
+
+@media(min-width:769px){
+
+    .mainheader {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+       height: 200px;
+       align-items:center ;
+     }
+
+
+
+     .main-nav {
+       display: flex;
+       margin-top: 1em;
+       flex-direction: row;
+       height: 100px;
+       justify-content: space-between;
+       align-self: center;
+       background-color: gold;
+       align-items:center ;
+
+      }
+
+      .main-nav li {
+     display: inline-block;
+      border-color: black;
+       margin-left: .65em;
+       margin-right: .65em;
+
+      }
+
+     .main-nav a {
+      color: black;
+      text-align: center;
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: .95em;
+      color: black;
+      border-radius: 0.25cm 0.25cm;
+      text-transform: uppercase;
+
+
+     }
+
+     .main-nav a:hover {
+        color: #093a58;
+        background-color: white;
+        box-sizing: border-box;
+
+    }
+
+}
+/* ---- Layout Containers ---- */
+
+
+.banner,
+.main-footer {
+	text-align: center;
+}
+.banner {
+	color: gold;
+	background:	#4169E1;
+	padding: 3.2em 0;
+    margin-bottom: 48px;
+
+    }
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+.main-footer {
+    background: blue;
+    color: gold;
+	padding: 2em 0;
+    margin-top: 30px;
+    display: flex;
+}
+.main-footer span{
+    float: left;
+
+}
+
+/* ---- Page Elements ---- */
+
+.sitelogo {
+    width: auto;
+    display: flex;
+    background-color: #E0FFFF;
+    border-top-left-radius: 2px;
+}
+.headline {
+	margin-bottom: 0;
+}
+.feat-img {
+	border-radius: 5px;
+}
+
+/* =================================
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+    @media (min-width: 769px) {
+
+        .main-header,
+        .main-nav {
+            display: flex;
+        }
+
+        .main-header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+	.row {
+        display: flex;
+        flex-direction: row;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.tagline {
+		font-size: 1.4em;
+	}
+
+    .col{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background-color: antiquewhite;
+    }
+
+        .primary{
+            display: flex;
+            background-color:  white;
+            box-sizing: border-box;
+            border-bottom-color: gold;
+            padding: 25px 25px;
+            border-radius: 5px 5px;
+        }
+        .secondary{
+            background-color: lightblue;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 15px 25px;
+            border-radius: 5px 5px;
+        }
+
+        .tertiary{
+            background-color: greenyellow;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 15px 25px;
+            border-radius: 5px 5px;
+        }
+    }
+
+@media (min-width: 1025px) {
+
+    .main-header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+    .row {
+        display:flex;
+    }
+
+    .col{
+        flex: 1;
+        flex-direction: column;
+        background-color: antiquewhite;
+    }
+
+    .primary{
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        background-color: white;
+        box-sizing: border-box;
+        border-bottom-color: gold;
+        padding: 15px 25px;
+        border-radius: 5px 5px;
+    }
+    .secondary{
+        display: flex;
+        background-color: white;
+        flex-direction: column;
+        background-color: white;
+        flex: 1;
+        box-sizing: border-box;
+        border-bottom-color: gold;
+        padding: 15px 25px;
+        border-radius: 5px 5px;
+    }
+
+    .tertiary{
+        background-color: greenyellow;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 15px 25px;
+        border-radius: 5px 5px;
+    }
+}
